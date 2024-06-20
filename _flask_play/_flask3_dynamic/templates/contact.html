@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    This is the contact page.
-</body>
-</html>
-<!-- TASK: how to change this to re-use the base.html using Jinja? -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h2> This is the contact page. </h2>
+    <ul>
+        <li>Phone: 0123456</li>
+        <li>Email: <a href="mailto:example@example.com">example@example.com</a></li>
+    </ul> 
+{% endblock %}

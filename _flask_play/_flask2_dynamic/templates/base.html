@@ -8,15 +8,11 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
-        <!-- Added a nav with two links -->
-        <nav>
-            <ul>
-              <li><a href="{{ url_for('home') }}">Home</a></li>
-              <li><a href="{{ url_for('contact') }}">Contact</a></li>
-            </ul>
-          </nav>
-    {% block content %}
+    {% block homepage_content %}
     {% endblock %}
-
+    
+    <p>
+        <a href="{{ url_for('greet') }}">Greet</a> 
+    </p>
 </body>
 </html>
