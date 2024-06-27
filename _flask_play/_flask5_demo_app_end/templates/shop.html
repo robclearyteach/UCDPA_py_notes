@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block links %}
+    <style>
+        .product-gallery{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="product-gallery">
+        {% for product in products%}
+                <figure >
+                    <img    height="200px"
+                            width ="150px"
+                            src="{{product['image_url']}}" 
+                            alt="image of product">
+                    <figcaption>
+                        €{{product['price']}}, {{product['description']}}
+                        {% if product['amount'] == 1 %}
+                        <p style="color:red">Only one left!</p>
+                        {% endif %}
+                    </figcaption>
+                </figure>
+
+        {% endfor%}
+    </div>
+
+{% endblock %}
+
+
